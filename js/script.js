@@ -30,7 +30,6 @@ $(document).ready(function(){
     // returns the input field to blank
     $('#city-type').val('');
 
-    // it doesn't work without this but i don't know why
     return false;
 
   }
