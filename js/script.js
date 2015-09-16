@@ -7,12 +7,11 @@ $(document).ready(function(){
   function changeImage(){
   console.log('clicked 1');
 
-    // collect city name that user inputs and store in city
-    var city = $('#city-type').val();
+    /* collect city name that user inputs and store in city
+    changes the user's input to lowercase so the case actually entered doesn't matter
+    trims extra spaces that the user inputs*/
+    var city = $('#city-type').val().toLowerCase().trim();
     console.log('clicked 2');
-
-    //changes the user's input to lowercase so the case actually entered doesn't matter
-    city = city.toLowerCase();
 
     if(city === 'new york' || city === 'new york city' || city === 'nyc'){
       //need the plus signs to concatenate the url, the array index, and the brackets
@@ -34,6 +33,9 @@ $(document).ready(function(){
 
     // returns the input field to blank
     $('#city-type').val('');
+
+    // it doesn't work without this but i don't know why
+    return false;
 
   }
 
